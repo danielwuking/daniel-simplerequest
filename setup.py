@@ -5,5 +5,5 @@ setup(name='daniel_simplerequest',
       description='simple request package based on python standard libraries',
       author='Daniel Wu',
       license='MIT',
-      packages=['daniel-simplerequest'],
+      packages=['daniel_simplerequest'],
       zip_safe=False)
