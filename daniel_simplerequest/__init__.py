@@ -1,8 +1,6 @@
-from error import error
+def get_json(url, params={}):
+    return {}
 
-def joke():
-    err = error()
-    print(err.error_msg)
-    return (u'Wenn ist das Nunst\u00fcck git und Slotermeyer? Ja! ... '
-            u'Beiherhund das Oder die Flipperwaldt gersput.')
+def post_json(url, data={}, params={}):
+    return {}
     
