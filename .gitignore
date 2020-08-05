@@ -3,3 +3,4 @@ __pycache__
 build
 dist
 daniel_simplerequest.egg-info
+test.py
