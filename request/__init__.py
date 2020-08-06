@@ -1,4 +1,5 @@
 from urllib.parse import urlencode
+import json
 
 def get_target_path(parsed_url, params): 
     params_str = urlencode(params)
@@ -6,3 +7,8 @@ def get_target_path(parsed_url, params):
     if len(params_str) > 0:
         url = url + '&' + params_str if '?' in url else url + '?' + params_str
     return url
+
+def parse_json_response(response):
+    res = json.loads(response.read())
+    res['status'] = response.status
+    return res

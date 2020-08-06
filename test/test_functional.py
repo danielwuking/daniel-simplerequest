@@ -35,14 +35,19 @@ def test_post_json():
     r = post_json('https://httpbin.org/post', params={'debug': 'true'}, data=data)
     assert r['args'] == {'debug': 'true'}, 'params should be passed successfully'
     assert r['json'] == data, 'data should be passed successfully'
+    assert r['headers']['Content-Type'] == 'application/json', 'content type should be included in headers'
 
     # data is empty
     r = post_json('https://httpbin.org/post', params={'debug': 'true'})
     assert r['args'] == {'debug': 'true'}, 'params should be passed successfully'
     assert r['json'] == {}, 'data should be passed successfully'
+    assert r['headers']['Content-Type'] == 'application/json', 'content type should be included in headers'
+
 
     # params is None
     data = {'isbn': '9789863479116', 'title': '流暢的 Python'}
     r = post_json('https://httpbin.org/post', data=data)
     assert r['args'] == {}, 'params should be passed successfully'
-    assert r['json'] == data, 'data should be passed successfully'    
+    assert r['json'] == data, 'data should be passed successfully' 
+    assert r['headers']['Content-Type'] == 'application/json', 'content type should be included in headers'
+   
