@@ -12,3 +12,7 @@ def parse_json_response(response):
     res = json.loads(response.read())
     res['status'] = response.status
     return res
+
+def validate_url(parsed_url):
+    if parsed_url.scheme == '' and parsed_url.netloc == '':
+        raise ValueError('input should be a valid url')

@@ -3,10 +3,12 @@ import http.client
 import json
 from urllib.parse import urlparse
 from error import RequestError
-from request import get_target_path, parse_json_response
+from request import get_target_path, parse_json_response, validate_url
 
 def _make_request(method, type, url, params={}, data={}):
     parsed_url = urlparse(url)
+    validate_url(parsed_url)
+
     path = get_target_path(parsed_url, params)
 
     conn = http.client.HTTPSConnection(parsed_url.hostname)
@@ -36,9 +38,3 @@ def get_json(url, params={}):
 
 def post_json(url, params={}, data={}):
     return _make_request('POST', 'json', url, params, data)
-
-
-get_json('https://httpbin.org/get?debug=true', params={'name': '常⾒見見問題 Q&A'})
-data = {'isbn': '9789863479116', 'title': '流暢的 Python'}
-post_json('https://httpbin.org/post', params={'debug': 'true'}, data=data)
-
