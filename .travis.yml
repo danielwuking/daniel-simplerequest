@@ -1,0 +1,7 @@
+language: python
+node_js:
+  - "3.8"
+install:
+    - pip install -r requirements.txt
+script:
+    - pytest

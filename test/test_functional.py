@@ -28,6 +28,10 @@ def test_get_json():
         assert get_json("https://httpbin.org/status/400"), 'should raise exception'
     assert e.value.status_code == 400, 'status code in request error should be 400'
 
+    #invalid url
+    with pytest.raises(ValueError) as e:
+        assert get_json("google"), 'should raise exception'
+
 
 def test_post_json():
     # both params and data
