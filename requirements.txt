@@ -1,0 +1,11 @@
+packaging==20.4
+pluggy==0.13.1
+py==1.9.0
+pylint==2.5.3
+pyparsing==2.4.7
+pytest==6.0.1
+requests==2.24.0
+requests-toolbelt==0.9.1
+twine==3.2.0
+urllib3==1.25.10
+wrapt==1.12.1
