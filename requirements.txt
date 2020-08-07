@@ -17,6 +17,7 @@ colorama==0.4.3
 confuse==1.1.0
 cryptography==2.9.2
 cycler==0.10.0
+daniel-simplerequest==0.1
 decorator==4.4.1
 defusedxml==0.6.0
 docutils==0.16
