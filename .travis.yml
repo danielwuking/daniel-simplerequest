@@ -7,3 +7,9 @@ install:
   - pip install -r requirements.txt
 script:
   - pytest
+deploy:
+  distributions: sdist bdist_wheel
+  skip_existing: true
+  provider: pypi
+  username: "__token__"
+  password: "pypi-AgENdGVzdC5weXBpLm9yZwIkMDUzZmQyYmQtMzlkZS00NDQ0LWE4ODctZDg3MzI1MThiZDZlAAJFeyJwZXJtaXNzaW9ucyI6IHsicHJvamVjdHMiOiBbImRhbmllbC1zaW1wbGVyZXF1ZXN0Il19LCAidmVyc2lvbiI6IDF9AAAGIKBq2G5q1w2VfrRSREmEPFYKOD485KtuUawQFyoLzqBx"
