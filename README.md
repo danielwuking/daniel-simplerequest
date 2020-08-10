@@ -4,7 +4,7 @@
 
 A simple Python request package based on standard libraries.
 
-You can install the package via pip command below from pypitest.
+You can install the package via pip command below from Test PyPI.
 
 ```python
 pip install -i https://test.pypi.org/simple/ daniel-simplerequest
@@ -21,9 +21,9 @@ daniel_simplerequest.post_json(url, params, data)
 
 url: url for the request object
 
-params: parametets to send in the query string of the request(optional)
+params: parameters to send in the query string of the request(optional)
 
-data: data to post send in the request(optional)
+data: data to send in the request(optional)
 
 ## Example
 
